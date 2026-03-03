@@ -34,4 +34,4 @@ def language(sentence):
         print("French")
     else:
         print("english")
-    language("The red cat sat on the mat. Why are you so sad cat? Don't ask that.")
+language("The red cat ssssssssssat on the mat. Why are you so sad cat? Don't ask that.")
