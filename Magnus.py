@@ -1,20 +1,16 @@
-def magnus(honi):
-    H= 0
-    O= 0
-    N= 0
-    I= 0
-    for i in honi:
-        if i =="H":
-            H += 1
-        elif i =="O":
-            O +=1
-        elif i == "N":
-            N +=1
-        elif i == "I":
-            I +=1
-    
+def magnus(word):
+    count = 0
+    state = 0
 
-
-
-
-magnus("Kile")
+    for char in word:
+        if state ==0 and char.upper() == "H":
+            state = 1
+        elif state ==1 and char.upper() == "O":
+            state = 2
+        elif state ==2 and char.upper() == "N":
+            state = 3
+        elif state ==3 and char.upper() == "I":
+            state = 0
+            count += 1
+    print(count)
+magnus("HONOASDOINAHINAOSDOAINHONDOGNHOINHIHONHIOSNHDIOSNHIOHWASINGNIHGNGHOANOIGABGGIENROIANFIGNGENRASIDONANWWIFUYCJASOAWNODIASHUHNUGEGANSMXHONOIHONIHNIHONHINOHNINOH")
