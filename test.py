@@ -1,18 +1,39 @@
-
 best_buy_items = [
-{
-    "name": "El Cinco",
-    "price": 399.99,
-    "department": "Consoles",
-    "description": "With the PlayStation®5 Pro console, the world's greatest game creators can enhance their games with incredible features like advanced ray tracing, super sharp image clarity for your 4K TV, and high frame rate gameplay*. That means you get to play PS5® games with the most impressive visuals ever possible on a PlayStation® console.PS5® Pro is an all-digital console with no disc drive. Sign into your account for PlayStation and go to PlayStation™Store to buy and download games**.."
-}
+    {
+        "name": "El Cinco",
+        "price": "399.99$",
+        "department": "Consoles",
+    },
+    {
+        "name": "El Cuatro",
+        "price": "199.99$",
+        "department": "Consoles",
+    },
+    { 
+        "name": "El Tres",
+        "price": "119.99$",
+        "department": "Consoles",
+    },
+    {
+        "name": "El Dos",
+        "price": "94.99$",
+        "department": "Consoles",
+    },
+    { 
+        "name": "El Uno",
+        "price": "49.99$",
+        "department": "Consoles",
+    }
 ]
-item = {}
-print(item["name"])
-print(item["price"])
-print(item["department"])
-print(item["description"])
-
-
-for index, item in enumerate(best_buy_items):
-    print(index, ":", item["name"])
+print("Which one would you like to buy? Please pick one.")
+cart = []
+total = 0
+done = False
+while not done:
+    for index, item in enumerate(best_buy_items):
+        print(index,":", item["name"])
+        print(index,":", item["price"])
+        print(index,":", item["department"] )
+    choice = int(input("Pick an item:"))
+    item = best_buy_items[choice]
+    cart += [item["name"]]
