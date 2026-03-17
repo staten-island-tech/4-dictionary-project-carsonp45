@@ -1,27 +1,27 @@
 best_buy_items = [
     {
         "name": "El Cinco",
-        "price": "399.99$",
+        "price": 399.99,
         "department": "Consoles",
     },
     {
         "name": "El Cuatro",
-        "price": "199.99$",
+        "price": 199.99,
         "department": "Consoles",
     },
     { 
         "name": "El Tres",
-        "price": "119.99$",
+        "price": 119.99,
         "department": "Consoles",
     },
     {
         "name": "El Dos",
-        "price": "94.99$",
+        "price": 94.99,
         "department": "Consoles",
     },
     { 
         "name": "El Uno",
-        "price": "49.99$",
+        "price": 49.99,
         "department": "Consoles",
     }
 ]
@@ -37,3 +37,11 @@ while not done:
     choice = int(input("Pick an item:"))
     item = best_buy_items[choice]
     cart += [item["name"]]
+    total += float(item['price'])
+    done = input("Are you done?) (yes or no)")
+    if done == "yes":
+        done = True
+        print("Items purchased", cart)
+        print("Total Cost", total)
+    elif done == "no":
+        done = False
